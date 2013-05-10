@@ -3,7 +3,8 @@
 
 -spec start_apps([atom()]) -> ok.
 start_apps(Apps) ->
-	_ = [recursive_start(App) || App <- Apps].
+	_ = [recursive_start(App) || App <- Apps],
+	ok.
 
 recursive_start(App) ->
 	recursive_start(App, permanent).
